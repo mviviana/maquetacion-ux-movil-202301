@@ -1,0 +1,32 @@
+.checkbox-med {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+	justify-content: flex-end;
+	align-items: center;
+	margin: 2%;
+}
+
+.mat-mdc-checkbox.mat-primary{
+	--mdc-checkbox-selected-checkmark-color: #ffffff;
+}
+
+.mat-mdc-form-field {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+
+
+.actions {
+	display: flex;
+	padding: 8px;
+	justify-content: space-around;
+	flex-direction: row;
+	padding: 3%;
+	button {
+		border-radius: 12px;
+		min-width: 200px;
+		color: #ffffff;
+	}
+}

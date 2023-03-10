@@ -1,0 +1,50 @@
+<mat-card>
+	<mat-form-field appearance="outline">
+		<mat-label>Medicamento</mat-label>
+		<input type="text" matInput />
+	</mat-form-field>
+
+	<section appearance="outline">
+		<label>Color y Forma</label>
+		<div class="div-columns">
+			<mat-icon fontIcon="radio_button_unchecked"></mat-icon>
+			<mat-icon fontIcon="water_drop"></mat-icon>
+			<mat-icon fontIcon="vaccines"></mat-icon>
+			<mat-icon fontIcon="circle"></mat-icon>
+			<mat-icon fontIcon="timelapse"></mat-icon>
+			<mat-icon fontIcon="healing"></mat-icon>
+			<mat-icon fontIcon="data_saver_on"></mat-icon>
+			<mat-icon fontIcon="brunch_dining"></mat-icon>
+			<mat-icon fontIcon="local_drink"></mat-icon>
+			<mat-icon fontIcon="medication_liquid"></mat-icon>
+		</div>
+		<div class="div-columns">
+			<mat-icon class="color-1" fontIcon="circle"></mat-icon>
+			<mat-icon class="color-2" fontIcon="circle"></mat-icon>
+			<mat-icon class="color-3" fontIcon="circle"></mat-icon>
+			<mat-icon  fontIcon="radio_button_unchecked"></mat-icon>
+			<mat-icon class="color-5" fontIcon="circle"></mat-icon>
+			<mat-icon class="color-6" fontIcon="circle"></mat-icon>
+			<mat-icon class="color-7" fontIcon="circle"></mat-icon>
+			<mat-icon class="color-8" fontIcon="circle"></mat-icon>
+			<mat-icon class="color-9" fontIcon="circle"></mat-icon>
+			<mat-icon class="color-10" fontIcon="circle"></mat-icon>
+		</div>
+	</section>
+	<mat-form-field appearance="outline">
+		<mat-label>Composición</mat-label>
+		<mat-select>
+			<mat-option>800 Miligramos</mat-option>
+			<mat-option>1000 Miligramos</mat-option>
+		</mat-select>
+	</mat-form-field>
+
+	<mat-card class="actions">
+		<button mat-raised-button color="accent" routerLink="/home">
+			Cancelar
+		</button>
+		<button mat-raised-button color="primary" routerLink="/home">
+			Guardar
+		</button>
+	</mat-card>
+</mat-card>

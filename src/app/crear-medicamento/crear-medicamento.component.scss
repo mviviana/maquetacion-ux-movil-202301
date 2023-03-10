@@ -1,0 +1,64 @@
+.actions {
+	display: flex;
+	padding: 8px;
+	justify-content: space-around;
+	flex-direction: row;
+	padding: 3%;
+	button {
+		border-radius: 12px;
+		min-width: 200px;
+		color: #ffffff;
+	}
+}
+
+mat-card {
+	padding-top: 6%;
+}
+.mat-mdc-form-field {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+section {
+	padding: 3%;
+}
+
+.div-columns {
+	display: flex;
+	justify-content: space-between;
+	padding: 3%;
+}
+.color-1 {
+	color: rgb(0, 68, 255);
+}
+.color-2 {
+	color: rgb(162, 0, 255);
+}
+.color-3 {
+	color: rgb(255, 0, 85);
+}
+.color-5 {
+	color: rgb(12, 12, 12);
+}
+.color-6 {
+	color: rgb(96, 97, 100);
+}
+.color-7 {
+	color: rgb(83, 67, 49);
+}
+.color-8 {
+	color: rgb(32, 139, 77);
+}
+.color-9 {
+	color: rgb(255, 153, 0);
+}
+.color-10 {
+	color: rgb(0, 204, 255);
+}
+
+mat-icon {
+	cursor: pointer;
+}
+
+mat-icon:hover  {
+	background-color: rgb(180, 185, 185);
+}
