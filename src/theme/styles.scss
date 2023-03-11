@@ -36,4 +36,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-stroked-button {
 	border-radius: 20px;
 }
-
+button[mat-raised-button] {
+	border-radius: 20px !important;
+	color:#FFFFFF !important;
+}

@@ -1,0 +1,40 @@
+<mat-card class="card">
+  <label class="label-titulo" >Registro</label>
+	<mat-form-field appearance="outline">
+		<mat-label>Nombre</mat-label>
+		<input type="text" matInput />
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Correo</mat-label>
+		<input type="text" matInput />
+	</mat-form-field>
+  <div class="div-column">
+		<mat-form-field appearance="outline">
+			<mat-label>Sexo</mat-label>
+			<mat-select>
+				<mat-option value="F">Femenino</mat-option>
+				<mat-option value="M">Masculina</mat-option>
+			</mat-select>
+		</mat-form-field>
+    <mat-form-field appearance="outline">
+			<mat-label>Edad</mat-label>
+			<input type="number" matInput />
+		</mat-form-field>
+	</div>
+  <mat-form-field appearance="outline">
+		<mat-label>Contraseña</mat-label>
+		<input type="text" matInput />
+	</mat-form-field>
+  <mat-form-field appearance="outline">
+		<mat-label>Contraseña</mat-label>
+		<input type="text" matInput />
+	</mat-form-field>
+	<div class="actions">
+		<button mat-raised-button color="accent" routerLink="/ingreso">
+			Cancelar
+		</button>
+		<button mat-raised-button color="primary" routerLink="/home">
+			Registrarme
+		</button>
+	</div>
+</mat-card>

@@ -1,0 +1,37 @@
+.actions {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 3%;
+  border: none;
+  button {
+    border-radius: 12px;
+    color: #ffffff;
+  }
+}
+
+.div-column {
+  display: flex;
+	flex-direction: row;
+}
+
+.card{
+  margin-top: 30%;
+}
+
+mat-card {
+  padding-top: 6%;
+  border-radius: 12px;
+}
+.mat-mdc-form-field {
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.label-titulo {
+  margin-bottom: 6%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 31px;
+}

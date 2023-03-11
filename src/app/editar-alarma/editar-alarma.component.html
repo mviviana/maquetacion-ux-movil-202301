@@ -5,7 +5,7 @@
 	</section>
 	<mat-form-field *ngIf="medicamento" appearance="outline">
 		<mat-label>Medicamento</mat-label>
-		<mat-select>
+		<mat-select value="acetaminofen">
 			<mat-option value="acetaminofen">Acetaminofen 80 mg</mat-option>
 			<mat-option value="lozartan" >Lozartan 250 mg</mat-option>
 		</mat-select>
@@ -16,7 +16,7 @@
 	</mat-form-field>
 	<mat-form-field appearance="outline">
 		<mat-label>Seleccione la fecha</mat-label>
-		<input matInput [matDatepicker]="picker" />
+		<input [formControl]="date" matInput [matDatepicker]="picker" />
 		<mat-hint>HH:MM DD/MM/YYYY</mat-hint>
 		<mat-datepicker-toggle
 			matIconSuffix
@@ -26,14 +26,14 @@
 	</mat-form-field>
 	<mat-form-field appearance="outline" *ngIf="medicamento">
 		<mat-label>Dosis</mat-label>
-		<mat-select>
+		<mat-select value="uno">
 			<mat-option value="uno">Una cada vez</mat-option>
 			<mat-option value="dos">Dos cada vez</mat-option>
 		</mat-select>
 	</mat-form-field>
 	<mat-form-field appearance="outline">
 		<mat-label>Repetición</mat-label>
-		<mat-select>
+		<mat-select value="doce">
 			<mat-option value="ocho">Cada 8 horas</mat-option>
 			<mat-option value="doce">Cada 12 horas</mat-option>
 		</mat-select>
@@ -41,7 +41,7 @@
 	<mat-card class="mat-column">
 		<mat-form-field appearance="outline">
 			<mat-label>Tiene Fin</mat-label>
-			<mat-select>
+			<mat-select value="si">
 				<mat-option value="si">Si</mat-option>
 				<mat-option value="no">No</mat-option>
 			</mat-select>
@@ -49,7 +49,7 @@
 
 		<mat-form-field appearance="outline">
 			<mat-label>Seleccione Fecha</mat-label>
-			<input matInput [matDatepicker]="pickera" />
+			<input  matInput [matDatepicker]="pickera" [formControl]="date" />
 			<mat-hint>DD/MM/YYYY</mat-hint>
 			<mat-datepicker-toggle
 				matIconSuffix
