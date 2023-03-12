@@ -3,6 +3,8 @@ import { RouteService } from '../route.service';
 import * as moment from 'moment';
 import {Router} from "@angular/router";
 import {DatePipe} from "@angular/common";
+import { DialogComponent } from '../dialog/dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-ingreso',
@@ -11,7 +13,8 @@ import {DatePipe} from "@angular/common";
 })
 export class TodayComponent implements OnInit {
 selectDate:any;
-  constructor(public routeService:RouteService, private router:Router,private datePipe: DatePipe) {
+  constructor(public routeService:RouteService, private router:Router,
+    private datePipe: DatePipe,public dialog: MatDialog ) {
   this.selectDate = moment().toISOString();
     console.log(`Selected: ${this.selectDate}`);
 
@@ -35,4 +38,20 @@ selectDate:any;
     }
     this.router.navigate(['home'])
   }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogComponent, {
+      data: {
+        title: "¿Esta seguro que desea conectar con google?",
+        subtitle: "Las alarmas serán visibles en su calendario",
+        back:true,
+        routeBack:"",
+        next:"route",
+        routeNext:"today",
+        icon:true
+      },
+    });
+
+  }
+
 }
