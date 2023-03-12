@@ -21,7 +21,6 @@ export class HomeComponent  {
   alarmas: AlarmModel[]=[];
 
 	 constructor(public dialog: MatDialog ,routeService:RouteService) {
-		 routeService.title="Inicio"
      routeService.menu = true
 		 this.alarmas=[
 			 {
@@ -73,6 +72,14 @@ export class HomeComponent  {
 
 	openDialog(): void {
 		const dialogRef = this.dialog.open(DialogComponent, {
+      data: {
+        title: "¿Esta seguro que desea eliminar la alarma?",
+        subtitle: "Esta acción es permanente",
+        back:"close",
+        routeBack:"",
+        next:"close",
+        routeNext:""
+      }
 		});
 
 		dialogRef.afterClosed();

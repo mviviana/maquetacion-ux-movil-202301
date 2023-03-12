@@ -1,3 +1,18 @@
-<p>
-  recuperar-contrasena works!
-</p>
+<mat-card class="card">
+  <label class="label-titulo" >Recuperar <br>contraseña</label>
+  <mat-form-field appearance="outline">
+    <mat-label>Correo</mat-label>
+    <input type="email" matInput />
+    <mat-hint>Digite su correo</mat-hint>
+
+  </mat-form-field>
+
+  <div class="actions">
+    <button mat-raised-button color="accent" routerLink="/registro">
+      Volver
+    </button>
+    <button mat-raised-button color="primary" (click)="openDialog()" >
+      Enviar
+    </button>
+  </div>
+</mat-card>

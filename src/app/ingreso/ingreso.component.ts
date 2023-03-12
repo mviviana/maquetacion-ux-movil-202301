@@ -6,9 +6,13 @@ import { RouteService } from '../route.service';
   templateUrl: './ingreso.component.html',
   styleUrls: ['./ingreso.component.scss'],
 })
-export class IngresoComponent  {
+export class IngresoComponent implements OnInit {
 
-  constructor(routeService:RouteService) {
+  constructor(public routeService:RouteService) {
 		routeService.menu = false
 	}
+
+  ngOnInit(): void {
+    this.routeService.menu = false
+  }
 }

@@ -7,14 +7,14 @@
 
 	<mat-form-field appearance="outline">
 		<mat-label>Contraseña</mat-label>
-		<input type="text" matInput />
+		<input type="password" matInput />
 	</mat-form-field>
-  <span class="span-contrasena">Olvide mi contraseña</span>
+  <span class="span-contrasena" routerLink="/recuperar-contrasena">Olvide mi contraseña</span>
 	<div class="actions">
 		<button mat-raised-button color="accent" routerLink="/registro">
 			Registrarme
 		</button>
-		<button mat-raised-button color="primary" routerLink="/home">
+		<button mat-raised-button color="primary" routerLink="/today">
 			Ingresar
 		</button>
 	</div>

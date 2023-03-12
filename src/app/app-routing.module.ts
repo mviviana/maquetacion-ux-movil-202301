@@ -7,11 +7,21 @@ import { HomeComponent } from './home/home.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
 import { ListadoAlarmasComponent } from './listado-alarmas/listado-alarmas.component';
 import { RegistroComponent } from './registro/registro.component';
+import {RecuperarContrasenaComponent} from "./recuperar-contrasena/recuperar-contrasena.component";
+import {TodayComponent} from "./today/today.component";
 
 const routes: Routes = [
   {
+		path: "",
+		redirectTo:"ingreso",
+    pathMatch:"full"
+	},
+  {
 		path: "home",
 		component: HomeComponent
+	},{
+		path: "today",
+		component: TodayComponent
 	},
   {
 		path: "ingreso",
@@ -36,6 +46,9 @@ const routes: Routes = [
   {
 		path: "crear-medicamento",
 		component: CrearMedicamentoComponent
+	},{
+		path: "recuperar-contrasena",
+		component: RecuperarContrasenaComponent
 	}
 ];
 

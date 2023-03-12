@@ -40,3 +40,21 @@ button[mat-raised-button] {
 	border-radius: 20px !important;
 	color:#FFFFFF !important;
 }
+
+.mat-mdc-form-field-hint{
+  font-size: 0.7em;
+  color: #777777;
+}
+.cdk-overlay-dark-backdrop{
+  background-image: url("../assets/fondo_gris.png") !important;
+}
+
+.mat-mdc-dialog-actions {
+  display: flex;
+  justify-content: end !important;
+  align-content: flex-end;
+}
+.mat-mdc-dialog-container .mdc-dialog__surface{
+  border-radius: 20px;
+}
+

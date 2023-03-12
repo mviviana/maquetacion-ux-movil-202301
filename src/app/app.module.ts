@@ -30,6 +30,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ListadoAlarmasComponent } from './listado-alarmas/listado-alarmas.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
 import { RegistroComponent } from './registro/registro.component';
+import {RouteService} from "./route.service";
+import {RecuperarContrasenaComponent} from "./recuperar-contrasena/recuperar-contrasena.component";
+import {TodayComponent} from "./today/today.component";
+import {DatePipe} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -41,7 +45,9 @@ import { RegistroComponent } from './registro/registro.component';
     EditarAlarmaComponent,
     ListadoAlarmasComponent,
     IngresoComponent,
-    RegistroComponent
+    RegistroComponent,
+    RecuperarContrasenaComponent,
+    TodayComponent
   ],
   imports: [
     BrowserModule,
@@ -65,7 +71,7 @@ import { RegistroComponent } from './registro/registro.component';
     MatDialogModule,
     ReactiveFormsModule
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, MatDialogModule],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, MatDialogModule,RouteService,DatePipe ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

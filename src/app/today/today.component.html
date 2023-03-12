@@ -1,0 +1,6 @@
+<mat-card class="card">
+  <label class="label-titulo" >{{selectDate|date:'EEEE, MMM d': 'GTM-5'}}</label>
+
+  <mat-calendar #calendar [(selected)]="selectDate" (selectedChange)= "dateChanged($event)" >
+  </mat-calendar>
+</mat-card>

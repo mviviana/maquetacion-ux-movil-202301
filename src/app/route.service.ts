@@ -7,6 +7,7 @@ export class RouteService {
 
   title: String = "Inicio";
   menu: boolean = true;
+  todayOption:boolean=false;
 
 	constructor() {
 	}

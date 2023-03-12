@@ -1,14 +1,14 @@
-<mat-drawer-container *ngIf="routeService.menu" class="app-container" autosize>
-  <mat-drawer #drawer class="alarma-sidenav" mode="side" opened="true">
+<mat-drawer-container *ngIf="routeService.menu" class="app-container" autosize [hasBackdrop]="true">
+  <mat-drawer #drawer class="alarma-sidenav" mode="over" opened="false"  >
     <mat-toolbar class="example-header">Menu</mat-toolbar>
     <mat-list>
       <div mat-subheader>Opciones</div>
       <mat-divider></mat-divider>
-      <mat-list-item routerLink="/home" routerLinkActive="actived">
+      <mat-list-item routerLink="/today" routerLinkActive="actived"  (click)="drawer.toggle()">
         <mat-icon matListItemIcon fontIcon="today"></mat-icon>
         <div matListItemTitle>Inicio</div>
       </mat-list-item>
-      <mat-list-item routerLink="/crear-alarma" routerLinkActive="actived">
+      <mat-list-item routerLink="/crear-alarma" routerLinkActive="actived"  (click)="drawer.toggle()">
         <mat-icon matListItemIcon fontIcon="schedule"></mat-icon>
         <div matListItemTitle>Crear alarma</div>
       </mat-list-item>
@@ -17,6 +17,10 @@
         <div matListItemTitle>Crear medicamento</div>
       </mat-list-item>
       <mat-divider></mat-divider>
+      <mat-list-item routerLink="/ingreso" routerLinkActive="actived">
+        <mat-icon matListItemIcon fontIcon="health_and_safety"></mat-icon>
+        <div matListItemTitle>Cerrar sesión</div>
+      </mat-list-item>
     </mat-list>
   </mat-drawer>
 
@@ -33,6 +37,14 @@
       <span>{{ routeService.title }}</span>
       <span class="example-spacer"></span>
       <button
+        *ngIf="routeService.todayOption"
+        mat-icon-button
+        class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon"
+        (click)="goToday()"
+      >
+        <mat-icon>event</mat-icon>
+      </button><button
         mat-icon-button
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
@@ -46,11 +58,8 @@
     </div>
   </div>
 </mat-drawer-container>
-<mat-drawer-container *ngIf="!routeService.menu" class="app-container" autosize>
+<mat-drawer-container *ngIf="!routeService.menu" class="app-container" >
   <div class="alarma-sidenav-content">
-    <mat-toolbar color="primary">
-
-    </mat-toolbar>
     <div class="container">
       <router-outlet> </router-outlet>
     </div>
