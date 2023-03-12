@@ -12,11 +12,15 @@ export class RecuperarContrasenaComponent  implements OnInit {
 
 
   constructor(public routeService:RouteService,public dialog: MatDialog ) {
-    routeService.menu = false
+    routeService.setNavOpts({
+      title:" ",
+      showMenu:false,
+      backOption:false,
+      todayOption:false
+    });
   }
 
   ngOnInit(): void {
-    this.routeService.menu = false
   }
 
   openDialog(): void {

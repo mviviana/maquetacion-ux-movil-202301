@@ -1,4 +1,4 @@
-<mat-drawer-container *ngIf="routeService.menu" class="app-container" autosize [hasBackdrop]="true">
+<mat-drawer-container *ngIf="routeService.getNavOps().showMenu" class="app-container" autosize [hasBackdrop]="true">
   <mat-drawer #drawer class="alarma-sidenav" mode="over" opened="false"  >
     <mat-toolbar class="example-header">Menu</mat-toolbar>
     <mat-list>
@@ -12,12 +12,12 @@
         <mat-icon matListItemIcon fontIcon="schedule"></mat-icon>
         <div matListItemTitle>Crear alarma</div>
       </mat-list-item>
-      <mat-list-item routerLink="/crear-medicamento" routerLinkActive="actived">
+      <mat-list-item routerLink="/crear-medicamento" routerLinkActive="actived" (click)="drawer.toggle()">
         <mat-icon matListItemIcon fontIcon="health_and_safety"></mat-icon>
         <div matListItemTitle>Crear medicamento</div>
       </mat-list-item>
       <mat-divider></mat-divider>
-      <mat-list-item routerLink="/ingreso" routerLinkActive="actived">
+      <mat-list-item routerLink="/ingreso" routerLinkActive="actived" (click)="drawer.toggle()">
         <mat-icon matListItemIcon fontIcon="circle"></mat-icon>
         <div matListItemTitle>Cerrar sesión</div>
       </mat-list-item>
@@ -27,6 +27,7 @@
   <div class="alarma-sidenav-content">
     <mat-toolbar color="primary">
       <button
+        *ngIf="!routeService.getNavOps().backOption"
         mat-icon-button
         class="example-icon"
         aria-label="Example icon-button with menu icon"
@@ -34,10 +35,19 @@
       >
         <mat-icon>menu</mat-icon>
       </button>
-      <span>{{ routeService.title }}</span>
+      <button
+        *ngIf="routeService.getNavOps().backOption"
+        (click)="back(routeService.getNavOps())"
+        mat-icon-button
+        class="example-icon"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <span>{{ routeService.getNavOps().title }}</span>
       <span class="example-spacer"></span>
       <button
-        *ngIf="routeService.todayOption"
+        *ngIf="routeService.getNavOps().todayOption"
         mat-icon-button
         class="example-icon favorite-icon"
         aria-label="Example icon-button with heart icon"
@@ -58,7 +68,7 @@
     </div>
   </div>
 </mat-drawer-container>
-<mat-drawer-container *ngIf="!routeService.menu" class="app-container" >
+<mat-drawer-container *ngIf="!routeService.getNavOps().showMenu" class="app-container" >
   <div class="alarma-sidenav-content">
     <div class="container">
       <router-outlet> </router-outlet>

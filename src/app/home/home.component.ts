@@ -20,8 +20,8 @@ export class HomeComponent  {
 
   alarmas: AlarmModel[]=[];
 
-	 constructor(public dialog: MatDialog ,routeService:RouteService) {
-     routeService.menu = true
+	 constructor(public dialog: MatDialog ,private routeService:RouteService) {
+
 		 this.alarmas=[
 			 {
 				 title:"Actaminofen",
@@ -87,4 +87,5 @@ export class HomeComponent  {
 	changeStatus(index:number, event:any){
 			let alarmModel = this.alarmas[index].active=event.checked
 	}
+
 }

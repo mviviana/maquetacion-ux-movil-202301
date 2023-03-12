@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouteService } from '../route.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-crear-alarma',
@@ -8,7 +9,21 @@ import { RouteService } from '../route.service';
 })
 export class CrearAlarmaComponent  {
   medicamento = true;
-	constructor(routeService:RouteService) {
-		routeService.title="Crear alarma"
+	constructor(private routeService:RouteService,private router:Router) {
+		routeService.setNavOpts({
+      title:"Crear alarma",
+      showMenu:true,
+      backOption:true,
+      todayOption:false
+    });
 	}
+  goToday(){
+    this.routeService.setNavOpts({
+      title:"Hoy",
+      showMenu:true,
+      backOption:true,
+      todayOption:false
+    });
+    this.router.navigate(['today']);
+  }
 }

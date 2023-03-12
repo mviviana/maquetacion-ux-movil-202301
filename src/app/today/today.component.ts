@@ -22,8 +22,12 @@ selectDate:any;
 }
 
   ngOnInit(): void {
-    this.routeService.menu = true
-    this.routeService.title='Mi agenda'
+    this.routeService.setNavOpts({
+      title:"Mi agenda",
+      showMenu:true,
+      backOption:false,
+      todayOption:false
+    });
   }
   dateChanged(date:any) {
     this.selectDate=date.value;
@@ -31,10 +35,19 @@ selectDate:any;
     console.log(`Selected: ${  new Date(date)}`);
     console.log(`Selected: ${  moment(moment().toISOString()).isSameOrAfter(new Date(date), 'day')}`);
     if(moment(moment().toISOString()).isSameOrAfter(new Date(date), 'day')){
-      this.routeService.title='Hoy'
+      this.routeService.setNavOpts({
+        title:"Hoy",
+        showMenu:true,
+        backOption:true,
+        todayOption:false
+      });
     }else{
-      this.routeService.todayOption=true;
-      this.routeService.title=this.datePipe.transform(date,'dd MMM yyyy')!;
+      this.routeService.setNavOpts({
+        title:this.datePipe.transform(date,'dd MMM yyyy')!,
+        showMenu:true,
+        backOption:true,
+        todayOption:true
+      });
     }
     this.router.navigate(['home'])
   }

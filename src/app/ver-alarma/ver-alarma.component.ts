@@ -21,17 +21,27 @@ export class VerAlarmaComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.routeService.menu = true;
     this.activatedRoute.params.subscribe(param=>{
       this.title=param['title'];
       this.subtitle=param['subtitle'];
       this.hora=param['hora'];
-      this.routeService.title = param['title'];
-    })
+      this.routeService.setNavOpts({
+        title:this.title,
+        showMenu:true,
+        backOption:true,
+        todayOption:false
+      });
+  })
   }
 
   back(){
-    this._location.back();
+    this.routeService.setNavOpts({
+      title:"Hoy",
+      showMenu:true,
+      backOption:true,
+      todayOption:false
+    });
+    this.router.navigate(["home"]);
   }
 
   openDialog(): void {

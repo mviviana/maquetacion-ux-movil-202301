@@ -40,10 +40,10 @@
 	</mat-form-field>
 
 	<mat-card class="actions">
-		<button mat-raised-button color="accent" routerLink="/home">
+		<button mat-raised-button color="accent" (click)="goToday()" >
 			Cancelar
 		</button>
-		<button mat-raised-button color="primary" routerLink="/home">
+		<button mat-raised-button color="primary" (click)="goToday()" >
 			Guardar
 		</button>
 	</mat-card>

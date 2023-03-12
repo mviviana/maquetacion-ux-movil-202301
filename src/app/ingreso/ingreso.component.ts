@@ -9,10 +9,14 @@ import { RouteService } from '../route.service';
 export class IngresoComponent implements OnInit {
 
   constructor(public routeService:RouteService) {
-		routeService.menu = false
+    routeService.setNavOpts({
+      title:" ",
+      showMenu:false,
+      backOption:false,
+      todayOption:false
+    });
 	}
 
   ngOnInit(): void {
-    this.routeService.menu = false
   }
 }

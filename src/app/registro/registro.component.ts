@@ -11,7 +11,12 @@ import {MatDialog} from "@angular/material/dialog";
 export class RegistroComponent  {
 
   constructor(routeService:RouteService,public dialog: MatDialog ) {
-		routeService.menu = false
+    routeService.setNavOpts({
+      title:"",
+      showMenu:false,
+      backOption:false,
+      todayOption:false
+    });
 	}
 
   openDialog(): void {
