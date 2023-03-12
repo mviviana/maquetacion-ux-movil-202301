@@ -36,3 +36,22 @@ mat-card {
   font-weight: 700;
   color: #666666;
 }
+
+.div-google{
+  display: flex;
+  padding-top: 45%;
+  justify-content: center;
+
+  button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    min-width: 200px;
+    border-radius: 12px;
+  }
+  span{
+    display: flex;
+    padding: 2%;
+  }
+}

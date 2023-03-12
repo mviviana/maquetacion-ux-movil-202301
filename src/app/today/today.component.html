@@ -1,6 +1,18 @@
 <mat-card class="card">
-  <label class="label-titulo" >{{selectDate|date:'EEEE, MMM d': 'GTM-5'}}</label>
+  <label class="label-titulo">{{
+    selectDate | date : "EEEE, MMM d" : "GTM-5"
+  }}</label>
 
-  <mat-calendar #calendar [(selected)]="selectDate" (selectedChange)= "dateChanged($event)" >
+  <mat-calendar
+    #calendar
+    [(selected)]="selectDate"
+    (selectedChange)="dateChanged($event)"
+  >
   </mat-calendar>
 </mat-card>
+<div class="div-google">
+  <button   (click)="openDialog()">
+    <img src="/assets/icons8-google-24.png" alt="image" />
+    <span> Conectar con Google</span>
+  </button>
+</div>

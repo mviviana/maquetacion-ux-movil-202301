@@ -1,10 +1,43 @@
-<h1 mat-dialog-title>{{data.title}} </h1>
+<div class="div-icon" *ngIf="data.icon">
+  <mat-icon fontIcon="mobile_friendly"></mat-icon>
+</div>
+<h1>{{ data.title }}</h1>
 <div mat-dialog-content>
-	<p>{{data.subtitle}}</p>
+  <p>{{ data.subtitle }}</p>
 </div>
 <div mat-dialog-actions>
-	<button mat-raised-button color="accent" *ngIf="data.back==true" (click)="onNoClick()">Cancelar</button>
-	<button mat-raised-button color="accent" *ngIf="data.back=='close'" (click)="onNoClick()">Cancelar</button>
-	<button mat-raised-button   color="primary" *ngIf="data.next==='route'" (click)="navigate(data.routeNext)" cdkFocusInitial>Aceptar</button>
-	<button mat-raised-button   color="primary" *ngIf="data.next==='close'" (click)="onNoClick()" cdkFocusInitial>Aceptar</button>
+  <button
+    mat-raised-button
+    color="accent"
+    *ngIf="data.back === true"
+    (click)="onNoClick()"
+  >
+    Cancelar
+  </button>
+  <button
+    mat-raised-button
+    color="accent"
+    *ngIf="data.back === 'close'"
+    (click)="onNoClick()"
+  >
+    Cancelar
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    *ngIf="data.next === 'route'"
+    (click)="navigate(data.routeNext)"
+    cdkFocusInitial
+  >
+    Aceptar
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    *ngIf="data.next === 'close'"
+    (click)="onNoClick()"
+    cdkFocusInitial
+  >
+    Aceptar
+  </button>
 </div>
