@@ -1,6 +1,7 @@
 <mat-card>
 	<mat-form-field appearance="outline">
 		<mat-label>Medicamento</mat-label>
+    <mat-hint>Digite el nombre del medicamento</mat-hint>
 		<input type="text" matInput />
 	</mat-form-field>
 
@@ -33,6 +34,7 @@
 	</section>
 	<mat-form-field appearance="outline">
 		<mat-label>Composición</mat-label>
+    <mat-hint>Seleccione la composición</mat-hint>
 		<mat-select>
 			<mat-option value="800">800 Miligramos</mat-option>
 			<mat-option value="1000">1000 Miligramos</mat-option>
@@ -43,7 +45,7 @@
 		<button mat-raised-button color="accent" (click)="goToday()" >
 			Cancelar
 		</button>
-		<button mat-raised-button color="primary" (click)="goToday()" >
+		<button mat-raised-button color="primary" routerLink="/home">
 			Guardar
 		</button>
 	</mat-card>

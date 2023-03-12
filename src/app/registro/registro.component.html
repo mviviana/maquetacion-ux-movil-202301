@@ -2,15 +2,18 @@
   <label class="label-titulo" >Registro</label>
 	<mat-form-field appearance="outline">
 		<mat-label>Nombre</mat-label>
+    <mat-hint>Digite su nombre</mat-hint>
 		<input type="text" matInput />
 	</mat-form-field>
 	<mat-form-field appearance="outline">
 		<mat-label>Correo</mat-label>
-		<input type="text" matInput />
+    <mat-hint>Digite su correo</mat-hint>
+		<input type="email" matInput />
 	</mat-form-field>
   <div class="div-column">
 		<mat-form-field appearance="outline">
 			<mat-label>Sexo</mat-label>
+      <mat-hint>Seleccione su sexo</mat-hint>
 			<mat-select>
 				<mat-option value="F">Femenino</mat-option>
 				<mat-option value="M">Masculina</mat-option>
@@ -18,15 +21,18 @@
 		</mat-form-field>
     <mat-form-field appearance="outline">
 			<mat-label>Edad</mat-label>
+      <mat-hint>Digite su edad</mat-hint>
 			<input type="number" matInput />
 		</mat-form-field>
 	</div>
   <mat-form-field appearance="outline">
 		<mat-label>Contraseña</mat-label>
+    <mat-hint>Digite su contraseña</mat-hint>
 		<input type="text" matInput />
 	</mat-form-field>
   <mat-form-field appearance="outline">
 		<mat-label>Contraseña</mat-label>
+    <mat-hint>Confirme su contraseña</mat-hint>
 		<input type="text" matInput />
 	</mat-form-field>
 	<div class="actions">

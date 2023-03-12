@@ -5,6 +5,7 @@
 	justify-content: space-around;
 	flex-direction: row;
 	padding: 3%;
+  border: none;
 	button {
 		border-radius: 12px;
 		color: #ffffff;
@@ -17,6 +18,8 @@
 
 mat-card {
 	padding-top: 6%;
+  margin-top: 20%;
+  border-radius: 12px;
 }
 .mat-mdc-form-field {
 	padding-left: 3%;
@@ -65,4 +68,8 @@ mat-icon {
 
 mat-icon:hover  {
 	background-color:  $accent;
+}
+
+mat-form-field{
+  margin-top: 2%;
 }
