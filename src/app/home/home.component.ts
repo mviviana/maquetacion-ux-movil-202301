@@ -24,7 +24,7 @@ export class HomeComponent  {
 
 		 this.alarmas=[
 			 {
-				 title:"Actaminofen",
+				 title:"Acetaminofen",
 				 subtitle:"500 mg Tomar 2",
 				 tipo:"medicamento",
 				 active: true,
