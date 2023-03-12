@@ -5,10 +5,10 @@ import { CrearMedicamentoComponent } from './crear-medicamento/crear-medicamento
 import { EditarAlarmaComponent } from './editar-alarma/editar-alarma.component';
 import { HomeComponent } from './home/home.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
-import { ListadoAlarmasComponent } from './listado-alarmas/listado-alarmas.component';
 import { RegistroComponent } from './registro/registro.component';
 import {RecuperarContrasenaComponent} from "./recuperar-contrasena/recuperar-contrasena.component";
 import {TodayComponent} from "./today/today.component";
+import {VerAlarmaComponent} from "./ver-alarma/ver-alarma.component";
 
 const routes: Routes = [
   {
@@ -32,10 +32,6 @@ const routes: Routes = [
 		component: RegistroComponent
 	},
   {
-		path: "listar-alarmas",
-		component: ListadoAlarmasComponent
-	},
-  {
 		path: "crear-alarma",
 		component: CrearAlarmaComponent
 	},
@@ -46,9 +42,14 @@ const routes: Routes = [
   {
 		path: "crear-medicamento",
 		component: CrearMedicamentoComponent
-	},{
+	},
+  {
 		path: "recuperar-contrasena",
 		component: RecuperarContrasenaComponent
+	},
+  {
+		path: "ver-alarma",
+		component: VerAlarmaComponent
 	}
 ];
 

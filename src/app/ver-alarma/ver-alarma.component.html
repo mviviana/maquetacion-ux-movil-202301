@@ -1,0 +1,19 @@
+<mat-card class="card">
+  <div class="flex-none card-actions flex align-items-center justify-content-end">
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" routerLink="/editar-alarma"></mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" color="warn" (click)="openDialog()"></mat-icon>
+  </div>
+  <label class="label-titulo" >{{title}}</label>
+
+  <p>{{subtitle}}</p>
+  <p>{{hora}}</p>
+
+  <div class="actions">
+    <button mat-raised-button color="accent" (click)="back()">
+      Ignorar
+    </button>
+    <button mat-raised-button color="primary" (click)="back()" >
+      Aceptar
+    </button>
+  </div>
+</mat-card>

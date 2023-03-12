@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { ListadoAlarmasComponent } from './listado-alarmas.component';
+import { VerAlarmaComponent } from './ver-alarma.component';
 
-describe('ListadoAlarmasComponent', () => {
-  let component: ListadoAlarmasComponent;
-  let fixture: ComponentFixture<ListadoAlarmasComponent>;
+describe('RecuperarContrasenaComponent', () => {
+  let component: VerAlarmaComponent;
+  let fixture: ComponentFixture<VerAlarmaComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListadoAlarmasComponent ],
+      declarations: [ VerAlarmaComponent ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ListadoAlarmasComponent);
+    fixture = TestBed.createComponent(VerAlarmaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -27,13 +27,13 @@ import { DialogComponent } from './dialog/dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { EditarAlarmaComponent } from './editar-alarma/editar-alarma.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ListadoAlarmasComponent } from './listado-alarmas/listado-alarmas.component';
 import { IngresoComponent } from './ingreso/ingreso.component';
 import { RegistroComponent } from './registro/registro.component';
 import {RouteService} from "./route.service";
 import {RecuperarContrasenaComponent} from "./recuperar-contrasena/recuperar-contrasena.component";
 import {TodayComponent} from "./today/today.component";
 import {DatePipe} from "@angular/common";
+import {VerAlarmaComponent} from "./ver-alarma/ver-alarma.component";
 
 @NgModule({
   declarations: [
@@ -43,11 +43,11 @@ import {DatePipe} from "@angular/common";
     HomeComponent,
     DialogComponent,
     EditarAlarmaComponent,
-    ListadoAlarmasComponent,
     IngresoComponent,
     RegistroComponent,
     RecuperarContrasenaComponent,
-    TodayComponent
+    TodayComponent,
+    VerAlarmaComponent
   ],
   imports: [
     BrowserModule,
