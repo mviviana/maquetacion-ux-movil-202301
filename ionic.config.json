@@ -1,5 +1,7 @@
 {
   "name": "doctor-alarma",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }
