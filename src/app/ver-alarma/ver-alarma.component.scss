@@ -37,7 +37,12 @@ mat-card {
   font-weight: 700;
   color: #666666;
 }
-
+div.icon {
+  margin: 10px;
+  background:#ededed !important;
+  padding: 6px 9px;
+  border-radius: 20px;
+}
 p{
   text-align: center;
 }

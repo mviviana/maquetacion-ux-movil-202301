@@ -11,14 +11,14 @@
 		02:00 PM
 	</h3>
 	<mat-card  class="mat-elevation-z4" [class.inactive]="!alarma.active"
-             [class.active]="alarma.active" [routerLink]="['/ver-alarma', alarma]">
+             [class.active]="alarma.active" >
 		<mat-card-content class="flex justify-content-between">
 				<div class="flex-none card-type-box flex align-items-center justify-content-center">
-					<div class="card-type {{alarma.tipo}}">
+					<div class="card-type {{alarma.tipo}}" [routerLink]="['/ver-alarma', alarma]">
 						A
 					</div>
 				</div>
-				<div class="flex-none flex flex-column justify-content-center">
+				<div class="flex-none flex flex-column justify-content-center" [routerLink]="['/ver-alarma', alarma]">
 					<div class="title-card">{{alarma.title}}</div>
 					<div class="subtitle-card">{{alarma.subtitle}}</div>
 				</div>

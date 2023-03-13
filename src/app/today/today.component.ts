@@ -34,7 +34,7 @@ selectDate:any;
     console.log(date);
     console.log(`Selected: ${  new Date(date)}`);
     console.log(`Selected: ${  moment(moment().toISOString()).isSameOrAfter(new Date(date), 'day')}`);
-    if(moment(moment().toISOString()).isSameOrAfter(new Date(date), 'day')){
+    if(moment(moment().toISOString()).isSame(new Date(date), 'day')){
       this.routeService.setNavOpts({
         title:"Hoy",
         showMenu:true,

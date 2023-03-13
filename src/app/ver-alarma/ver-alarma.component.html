@@ -1,7 +1,13 @@
 <mat-card class="card">
   <div class="flex-none card-actions flex align-items-center justify-content-end p-icon">
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" routerLink="/editar-alarma"></mat-icon>
-    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" color="warn" (click)="openDialog()"></mat-icon>
+    <div class="icon">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="edit" routerLink="/editar-alarma"></mat-icon>
+
+    </div>
+    <div class="icon">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="delete" color="warn" (click)="openDialog()"></mat-icon>
+
+    </div>
   </div>
   <label class="label-titulo" >{{title}}</label>
 
