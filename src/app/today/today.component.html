@@ -1,17 +1,20 @@
-<mat-card class="card">
-  <label class="label-titulo">{{
-    selectDate | date : "EEEE, MMM d" : "GTM-5"
-  }}</label>
+<div class="content-today flex flex-column">
 
-  <mat-calendar
-    #calendar
-    (selectedChange)="dateChanged($event)"
-  >
-  </mat-calendar>
-</mat-card>
-<div class="div-google">
-  <button   (click)="openDialog()">
-    <img src="/assets/icons8-google-24.png" alt="image" />
-    <span> Conectar con Google</span>
-  </button>
+  <mat-card class="card ">
+    <label class="label-titulo">{{
+      selectDate | date : "EEEE, MMM d" : "GTM-5"
+      }}</label>
+
+    <mat-calendar
+      #calendar
+      (selectedChange)="dateChanged($event)"
+    >
+    </mat-calendar>
+  </mat-card>
+  <div class="div-google">
+    <button  (click)="openDialog()" color="accent">
+      <img src="/assets/icons8-google-24.png" alt="image"/>
+      <span> Conectar con Google</span>
+    </button>
+  </div>
 </div>

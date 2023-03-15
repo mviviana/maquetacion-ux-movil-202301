@@ -61,7 +61,7 @@ selectDate:any;
         routeBack:"",
         next:"route",
         routeNext:"today",
-        icon:true
+        iconSync:true
       },
     });
 

@@ -1,5 +1,8 @@
-<div class="div-icon" *ngIf="data.icon">
+<div class="div-icon" *ngIf="data.iconSync">
   <mat-icon fontIcon="mobile_friendly"></mat-icon>
+</div>
+<div class="div-icon" *ngIf="data.iconDelete">
+  <mat-icon fontIcon="delete"></mat-icon>
 </div>
 <h1>{{ data.title }}</h1>
 <div mat-dialog-content>

@@ -1,3 +1,4 @@
+@import "../../theme/variables.scss";
 .actions {
   margin-top: 15%;
   display: flex;
@@ -29,18 +30,11 @@ mat-card {
   justify-content: space-around;
   font-size: 31px;
 }
-.span-contrasena{
-  display: flex;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 700;
-  color: #666666;
-}
 
 .div-google{
   display: flex;
-  padding-top: 45%;
   justify-content: center;
+  margin-top: 20%;
 
   button{
     display: flex;
@@ -49,9 +43,15 @@ mat-card {
     padding: 2%;
     min-width: 200px;
     border-radius: 12px;
+    background-color: $accent;
   }
   span{
     display: flex;
     padding: 2%;
   }
+}
+.content-today{
+  display: flex;
+  width: 100%;
+
 }

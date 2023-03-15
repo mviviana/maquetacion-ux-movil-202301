@@ -52,7 +52,8 @@ export class VerAlarmaComponent implements OnInit {
         back:true,
         routeBack:"close",
         next:"close",
-        routeNext:"ingreso"
+        routeNext:"ingreso",
+        iconDelete:true
       },
     });
 
